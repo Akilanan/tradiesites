@@ -93,6 +93,16 @@
   .browser-bar .url{margin-left:.6rem;font-size:.75rem;color:#64748b;background:var(--ink);padding:.25rem .8rem;border-radius:999px}
   .showcase img{width:100%;border-radius:10px;display:block;border:1px solid var(--line)}
   .showcase .tag{position:absolute;top:1.4rem;right:1.4rem;background:var(--volt);color:var(--ink);font-weight:700;font-size:.72rem;padding:.3rem .7rem;border-radius:999px;font-family:var(--disp)}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3rem}
+  .work-card{border:1px solid var(--line);background:var(--steel2);border-radius:16px;overflow:hidden;transition:.3s;text-decoration:none;display:block}
+  .work-card:hover{transform:translateY(-6px);border-color:rgba(255,196,0,.4);box-shadow:0 24px 50px -20px rgba(0,0,0,.5)}
+  .work-card .shot{height:200px;overflow:hidden;border-bottom:1px solid var(--line)}
+  .work-card .shot img{width:100%;display:block}
+  .work-card .meta{padding:1.1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+  .work-card .meta .t{font-family:var(--disp);font-weight:700;color:#fff;font-size:1rem}
+  .work-card .meta .t span{display:block;font-family:var(--body);font-weight:400;color:var(--txt-dim);font-size:.82rem;margin-top:2px}
+  .work-card .meta .go{color:var(--volt);font-size:.82rem;font-weight:600;white-space:nowrap}
+  @media(max-width:860px){.work-grid{grid-template-columns:1fr}}
 
   /* features grid */
   .grid{display:grid;gap:1.1rem;margin-top:3rem}
@@ -233,16 +243,22 @@
   <div class="wrap">
     <div class="sec-head center reveal">
       <p class="eyebrow">Our work</p>
-      <h2>Here's a site we built for a sparky.</h2>
-      <p>This is the standard. Clean, fast, and built to turn lookers into callers — yours would be just like it, with your name, your trade, your jobs.</p>
+      <h2>Real sites, built to win jobs.</h2>
+      <p>Every trade, the same premium standard — clean, fast, and built to turn lookers into callers. Tap any one to see it live.</p>
     </div>
-    <div class="showcase reveal">
-      <div class="browser-bar">
-        <span class="b"></span><span class="b"></span><span class="b"></span>
-        <span class="url">voltline-electrical.com.au</span>
-      </div>
-      <span class="tag">★ Sample build</span>
-      <img src="img/voltline-desktop.png" alt="Voltline Electrical website built by TradieSites" loading="lazy" />
+    <div class="work-grid">
+      <a href="sample/" target="_blank" rel="noopener" class="work-card reveal">
+        <div class="shot"><img src="img/thumb-electrician.png" alt="Voltline Electrical website" loading="lazy" /></div>
+        <div class="meta"><span class="t">Voltline Electrical<span>Electrician · Sydney</span></span><span class="go">View live →</span></div>
+      </a>
+      <a href="plumber/" target="_blank" rel="noopener" class="work-card reveal">
+        <div class="shot"><img src="img/thumb-plumber.png" alt="ClearFlow Plumbing website" loading="lazy" /></div>
+        <div class="meta"><span class="t">ClearFlow Plumbing<span>Plumber · Brisbane</span></span><span class="go">View live →</span></div>
+      </a>
+      <a href="builder/" target="_blank" rel="noopener" class="work-card reveal">
+        <div class="shot"><img src="img/thumb-builder.png" alt="Cornerstone Building website" loading="lazy" /></div>
+        <div class="meta"><span class="t">Cornerstone Building<span>Builder · Melbourne</span></span><span class="go">View live →</span></div>
+      </a>
     </div>
   </div>
 </section>
