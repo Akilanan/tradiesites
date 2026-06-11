@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TradieSites — Websites That Get Aussie Tradies More Jobs</title>
+<meta name="description" content="TradieSites builds fast, professional websites for Australian tradies — electricians, plumbers, chippies & more. Free mockup, get found on Google, more calls. From $49/mo, all done for you." />
+
+<!-- ===== SWAP POINTS (your details) =====
+  YOUR NAME .. Akilan        PHONE .. +61 4XX XXX XXX (get a free AU number — see notes)
+  EMAIL ...... hello@tradiesites.com.au   PHOTO .. img/akilan.jpg (drop a headshot here)
+  FORM KEY ... access_key in the form (free from web3forms.com)
+======================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#0B1120; --navy:#0F1A33; --steel:#1B2A4A; --steel2:#16243f;
+    --volt:#FFC400; --voltdark:#E0A800; --line:rgba(255,255,255,.08);
+    --txt:#cbd5e1; --txt-dim:#94a3b8; --white:#fff;
+    --disp:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--ink);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:var(--disp);color:var(--white);line-height:1.1;letter-spacing:-.02em}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .volt{color:var(--volt)}
+  .eyebrow{color:var(--volt);font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+  .glow{box-shadow:0 0 0 1px rgba(255,196,0,.25),0 18px 40px -12px rgba(255,196,0,.35)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:999px;font-weight:700;font-family:var(--disp);cursor:pointer;transition:.25s;border:none;font-size:1rem}
+  .btn-volt{background:var(--volt);color:var(--ink);padding:.9rem 1.7rem}
+  .btn-volt:hover{background:var(--voltdark);transform:translateY(-1px)}
+  .btn-ghost{background:rgba(255,255,255,.05);color:#fff;border:1px solid rgba(255,255,255,.15);padding:.9rem 1.7rem}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .ico{width:1.05em;height:1.05em;fill:currentColor;flex-shrink:0}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,17,32,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:.6rem;font-family:var(--disp);font-weight:800;color:#fff;font-size:1.15rem}
+  .logo .mark{width:36px;height:36px;display:grid;place-items:center;border-radius:9px;background:var(--volt);color:var(--ink)}
+  .logo .mark svg{width:20px;height:20px;fill:currentColor}
+  .links{display:flex;gap:2rem;font-weight:500;font-size:.92rem}
+  .links a{color:var(--txt)}.links a:hover{color:#fff}
+  .nav .btn-volt{padding:.55rem 1.1rem;font-size:.9rem}
+
+  .hero{padding:150px 0 90px;position:relative;background:
+     radial-gradient(900px 500px at 80% -10%, rgba(255,196,0,.12), transparent 60%),
+     linear-gradient(rgba(11,17,32,.92),rgba(11,17,32,.98)),
+     repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.035) 39px,rgba(255,255,255,.035) 40px),
+     repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.035) 39px,rgba(255,255,255,.035) 40px)}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(255,196,0,.3);background:rgba(255,196,0,.1);color:var(--volt);padding:.35rem .8rem;border-radius:999px;font-size:.78rem;font-weight:600;margin-bottom:1.4rem}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--volt);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero h1{font-size:clamp(2.4rem,6.2vw,4rem);font-weight:800;max-width:840px}
+  .hero p.lead{margin-top:1.4rem;font-size:1.2rem;color:var(--txt);max-width:600px}
+  .hero .cta{margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap}
+  .hero .micro{margin-top:1.2rem;font-size:.85rem;color:var(--txt-dim)}
+
+  section{padding:90px 0}
+  .bg-navy{background:var(--navy)}
+  .sec-head{max-width:640px}
+  .sec-head h2{font-size:clamp(1.9rem,4.4vw,2.6rem);font-weight:800;margin-top:.5rem}
+  .sec-head p{margin-top:1rem;color:var(--txt-dim)}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* trades strip */
+  .trades{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:2rem}
+  .chip{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);padding:.5rem 1rem;border-radius:999px;font-size:.9rem;color:#e2e8f0}
+
+  /* problem */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+  .stat-big{font-family:var(--disp);font-weight:800;color:var(--volt);font-size:3.2rem;line-height:1}
+  .prob-list{margin-top:1.6rem;display:flex;flex-direction:column;gap:1rem}
+  .prow{display:flex;gap:.8rem;align-items:flex-start}
+  .prow .x{flex-shrink:0;width:26px;height:26px;display:grid;place-items:center;border-radius:7px;background:rgba(239,68,68,.15);color:#f87171;font-weight:700;font-size:.9rem}
+  .prow .v{flex-shrink:0;width:26px;height:26px;display:grid;place-items:center;border-radius:7px;background:rgba(255,196,0,.15);color:var(--volt)}
+  .prow .v svg{width:16px;height:16px;fill:currentColor}
+
+  /* showcase */
+  .showcase{border:1px solid var(--line);background:var(--steel2);border-radius:20px;padding:1.2rem;margin-top:3rem;position:relative;overflow:hidden}
+  .browser-bar{display:flex;align-items:center;gap:.5rem;padding:.2rem .4rem .8rem}
+  .browser-bar .b{width:11px;height:11px;border-radius:50%;background:#334155}
+  .browser-bar .url{margin-left:.6rem;font-size:.75rem;color:#64748b;background:var(--ink);padding:.25rem .8rem;border-radius:999px}
+  .showcase img{width:100%;border-radius:10px;display:block;border:1px solid var(--line)}
+  .showcase .tag{position:absolute;top:1.4rem;right:1.4rem;background:var(--volt);color:var(--ink);font-weight:700;font-size:.72rem;padding:.3rem .7rem;border-radius:999px;font-family:var(--disp)}
+
+  /* features grid */
+  .grid{display:grid;gap:1.1rem;margin-top:3rem}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .card{border:1px solid var(--line);background:rgba(27,42,74,.4);border-radius:16px;padding:1.5rem;transition:.3s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(255,196,0,.45);box-shadow:0 24px 50px -20px rgba(0,0,0,.5)}
+  .card .cico{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:rgba(255,196,0,.15);color:var(--volt);margin-bottom:1rem}
+  .card .cico svg{width:22px;height:22px;fill:currentColor}
+  .card h3{font-size:1.1rem;font-weight:700}
+  .card p{margin-top:.5rem;font-size:.9rem;color:var(--txt-dim)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;counter-reset:s}
+  .step{position:relative;padding:1.6rem;border:1px solid var(--line);background:var(--navy);border-radius:16px}
+  .bg-navy .step{background:var(--steel2)}
+  .step .n{font-family:var(--disp);font-weight:800;color:var(--volt);font-size:1.6rem;margin-bottom:.5rem}
+  .step h3{font-size:1.1rem;font-weight:700}.step p{margin-top:.4rem;font-size:.9rem;color:var(--txt-dim)}
+
+  /* pricing */
+  .price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:820px;margin:3rem auto 0}
+  .plan{border:1px solid var(--line);background:var(--steel2);border-radius:20px;padding:2rem}
+  .plan.hot{border-color:var(--volt);box-shadow:0 0 0 1px var(--volt),0 24px 60px -24px rgba(255,196,0,.4);position:relative}
+  .plan .ribbon{position:absolute;top:-12px;left:2rem;background:var(--volt);color:var(--ink);font-weight:700;font-size:.72rem;padding:.25rem .8rem;border-radius:999px;font-family:var(--disp)}
+  .plan h3{font-size:1.15rem;font-weight:700}
+  .plan .amt{font-family:var(--disp);font-weight:800;color:#fff;font-size:2.6rem;margin:.6rem 0}
+  .plan .amt span{font-size:1rem;color:var(--txt-dim);font-weight:500}
+  .plan ul{list-style:none;margin:1.2rem 0;display:flex;flex-direction:column;gap:.7rem}
+  .plan li{display:flex;gap:.6rem;font-size:.92rem;color:var(--txt)}
+  .plan li svg{width:18px;height:18px;fill:var(--volt);flex-shrink:0;margin-top:3px}
+  .plan .btn{width:100%}
+
+  /* about */
+  .about{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;max-width:820px}
+  .avatar{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--volt),var(--voltdark));display:grid;place-items:center;font-family:var(--disp);font-weight:800;color:var(--ink);font-size:3rem;flex-shrink:0;box-shadow:0 0 0 6px rgba(255,196,0,.12)}
+
+  /* contact */
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:980px;margin:0 auto}
+  .cline{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+  .cline .ci{width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:rgba(255,196,0,.15);color:var(--volt);transition:.25s}
+  .cline:hover .ci{background:var(--volt);color:var(--ink)}
+  .cline .ci svg{width:22px;height:22px;fill:currentColor}
+  .cline .lbl{font-size:.75rem;color:var(--txt-dim)}.cline .val{font-weight:600;color:#fff}
+  form{border:1px solid var(--line);background:rgba(27,42,74,.4);border-radius:16px;padding:1.8rem}
+  form label{display:block;font-size:.85rem;font-weight:500;color:var(--txt);margin-bottom:.4rem}
+  .field{margin-bottom:1rem}
+  input,textarea{width:100%;background:rgba(11,17,32,.6);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:.8rem 1rem;color:#fff;font-family:var(--body);font-size:.95rem;transition:.2s}
+  input::placeholder,textarea::placeholder{color:#64748b}
+  input:focus,textarea:focus{outline:none;border-color:var(--volt);box-shadow:0 0 0 1px var(--volt)}
+  textarea{resize:none}
+  form .btn-volt{width:100%;margin-top:.3rem}
+  .fineprint{font-size:.75rem;color:#64748b;text-align:center;margin-top:.8rem}
+
+  footer{border-top:1px solid var(--line);background:var(--ink);padding:48px 0}
+  .foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-start}
+  .foot .fdesc{max-width:320px;margin-top:.8rem;font-size:.9rem;color:var(--txt-dim)}
+  .foot-bottom{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.78rem;color:#475569}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .links{display:none}
+    .two-col,.about,.contact{grid-template-columns:1fr;gap:2rem}
+    .g3,.steps,.price-wrap{grid-template-columns:1fr}
+    .about{text-align:center;justify-items:center}
+  }
+  @media(max-width:520px){ .nav .btn-volt{display:none} }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="mark"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9-12h-6.5L13 2z"/></svg></span>Tradie<span class="volt">Sites</span></a>
+    <nav class="links">
+      <a href="#work">Our Work</a><a href="#what">What You Get</a><a href="#pricing">Pricing</a><a href="#how">How It Works</a>
+    </nav>
+    <a href="#contact" class="btn btn-volt glow">Get a Free Mockup</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="wrap">
+    <span class="pill reveal"><span class="dot"></span> Built for Aussie tradies</span>
+    <h1 class="reveal">Websites that get tradies <span class="volt">more jobs.</span></h1>
+    <p class="lead reveal">No website means you're invisible when locals Google "electrician near me" — and that work goes to your competitors. We fix that. A sharp, fast site that gets you found and gets your phone ringing.</p>
+    <div class="cta reveal">
+      <a href="#contact" class="btn btn-volt glow">Get My Free Mockup</a>
+      <a href="#work" class="btn btn-ghost">See an Example</a>
+    </div>
+    <p class="micro reveal">⚡ Free mockup first — you only pay if you love it. No lock-in.</p>
+  </div>
+</section>
+
+<!-- TRADES STRIP -->
+<section class="bg-navy" style="padding:50px 0">
+  <div class="wrap center">
+    <p class="eyebrow reveal">We build for</p>
+    <div class="trades reveal">
+      <span class="chip">⚡ Electricians</span><span class="chip">🔧 Plumbers</span><span class="chip">🪚 Carpenters</span>
+      <span class="chip">🧱 Builders</span><span class="chip">🎨 Painters</span><span class="chip">❄️ HVAC</span>
+      <span class="chip">🌿 Landscapers</span><span class="chip">🧹 Cleaners</span><span class="chip">+ every trade</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section>
+  <div class="wrap two-col">
+    <div class="reveal">
+      <p class="eyebrow">The problem</p>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,2.6rem);font-weight:800;margin-top:.5rem">No website? You're losing jobs every week.</h2>
+      <div class="stat-big" style="margin-top:1.4rem">8 in 10</div>
+      <p style="color:var(--txt-dim);margin-top:.4rem">customers check you online before they call. No site — or a dodgy one — and they scroll straight past to the next tradie.</p>
+      <div class="prob-list">
+        <div class="prow"><span class="x">✕</span><div>Not showing up on Google for "your trade + your suburb"</div></div>
+        <div class="prow"><span class="x">✕</span><div>Relying only on word-of-mouth and dropped-off referrals</div></div>
+        <div class="prow"><span class="x">✕</span><div>Looking less legit than the competitor who <em>does</em> have a site</div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">The fix</p>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,2.6rem);font-weight:800;margin-top:.5rem">A site that does the selling for you.</h2>
+      <div class="prob-list" style="margin-top:1.6rem">
+        <div class="prow"><span class="v"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span><div>Found on Google for the searches that bring real jobs</div></div>
+        <div class="prow"><span class="v"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span><div>One-tap call &amp; quote buttons — turn visitors into bookings</div></div>
+        <div class="prow"><span class="v"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span><div>Looks premium and trustworthy on every phone</div></div>
+        <div class="prow"><span class="v"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span><div>We build it, host it &amp; maintain it — you stay on the tools</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section id="work" class="bg-navy">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Our work</p>
+      <h2>Here's a site we built for a sparky.</h2>
+      <p>This is the standard. Clean, fast, and built to turn lookers into callers — yours would be just like it, with your name, your trade, your jobs.</p>
+    </div>
+    <div class="showcase reveal">
+      <div class="browser-bar">
+        <span class="b"></span><span class="b"></span><span class="b"></span>
+        <span class="url">voltline-electrical.com.au</span>
+      </div>
+      <span class="tag">★ Sample build</span>
+      <img src="img/voltline-desktop.png" alt="Voltline Electrical website built by TradieSites" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What you get</p>
+      <h2>Everything you need to win work online.</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card reveal"><div class="cico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 016 6h-2a4 4 0 00-4-4z"/></svg></div><h3>Get found on Google</h3><p>Set up to rank for "your trade + suburb" so local customers actually find you.</p></div>
+      <div class="card reveal"><div class="cico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.9c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.3z"/></svg></div><h3>Click-to-call &amp; quotes</h3><p>One-tap call button and a quote form that emails you instantly. No lead slips through.</p></div>
+      <div class="card reveal"><div class="cico"><svg viewBox="0 0 24 24"><path d="M7 2h10a1 1 0 011 1v18l-6-3-6 3V3a1 1 0 011-1z"/></svg></div><h3>Mobile-perfect</h3><p>Most customers find you on their phone — your site looks sharp on every screen.</p></div>
+      <div class="card reveal"><div class="cico"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5z"/></svg></div><h3>Built to build trust</h3><p>Reviews, licence &amp; insurance badges, service areas — everything that makes people book.</p></div>
+      <div class="card reveal"><div class="cico"><svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg></div><h3>Google Business setup</h3><p>We get your free Google profile sorted so you show up on Maps and in search.</p></div>
+      <div class="card reveal"><div class="cico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg></div><h3>Hosting &amp; upkeep</h3><p>We host it, keep it secure, and make your edits — you never touch the tech.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="bg-navy">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Simple pricing</p>
+      <h2>Free mockup. Then pick what suits.</h2>
+      <p>No big upfront bill. See your site first — only pay once you love it.</p>
+    </div>
+    <div class="price-wrap">
+      <div class="plan hot reveal">
+        <span class="ribbon">Most popular</span>
+        <h3>Care Plan</h3>
+        <div class="amt">$49<span>/month</span></div>
+        <p style="color:var(--txt-dim);font-size:.9rem">$0 to build. Everything done for you.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Custom site built free</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Hosting + your domain included</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Unlimited small edits</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Google Business profile setup</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Cancel anytime, no lock-in</li>
+        </ul>
+        <a href="#contact" class="btn btn-volt glow">Get Started Free</a>
+      </div>
+      <div class="plan reveal">
+        <h3>One-Off Build</h3>
+        <div class="amt">$699<span> once</span></div>
+        <p style="color:var(--txt-dim);font-size:.9rem">Own it outright. Optional $25/mo upkeep.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Custom site, built once</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> You own the files</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Google Business profile setup</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Optional hosting + edits $25/mo</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Enquire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>Live in days, not weeks.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Free mockup</h3><p>Tell us your trade &amp; area. We build you a free sample site with your name on it — no cost, no commitment.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>You love it</h3><p>Happy? We tweak anything you want and pick your plan. Not for you? No worries, walk away.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>We launch &amp; maintain</h3><p>We put it live on your domain, set up Google, and handle every change from there. You just take the calls.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="bg-navy">
+  <div class="wrap about reveal">
+    <!-- swap: replace avatar with <img src="img/akilan.jpg" class="avatar"> once you add a photo -->
+    <div class="avatar">A</div>
+    <div>
+      <p class="eyebrow">Who you're dealing with</p>
+      <h2 style="font-size:clamp(1.7rem,4vw,2.2rem);font-weight:800;margin-top:.5rem">Hi, I'm Akilan — I build TradieSites.</h2>
+      <p style="color:var(--txt-dim);margin-top:1rem">I make clean, fast websites for hard-working tradies who are too busy on the tools to muck around with tech. No jargon, no big agency runaround — just a sharp site that gets you more calls, and a real person who picks up when you need a change. Let's get you found.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Get started</p>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,2.6rem);font-weight:800;margin-top:.5rem">Get your free mockup.</h2>
+      <p style="margin:1rem 0 2rem;color:var(--txt-dim)">Tell me your trade and your area — I'll build you a free sample site and send it over. No cost, no pressure.</p>
+      <a href="tel:+610000000000" class="cline"><span class="ci"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.9c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.3z"/></svg></span><div><div class="lbl">Call / text</div><div class="val">+61 4XX XXX XXX</div></div></a>
+      <a href="mailto:hello@tradiesites.com.au" class="cline"><span class="ci"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 4 8 5 8-5"/></svg></span><div><div class="lbl">Email</div><div class="val">hello@tradiesites.com.au</div></div></a>
+    </div>
+    <form action="https://api.web3forms.com/submit" method="POST" class="reveal">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+      <input type="hidden" name="subject" value="New free-mockup request — TradieSites" />
+      <div class="field"><label>Your name</label><input name="name" required placeholder="Your name" /></div>
+      <div class="field"><label>Your trade &amp; suburb</label><input name="trade" required placeholder="e.g. Electrician, Parramatta" /></div>
+      <div class="field"><label>Phone / email</label><input name="contact" required placeholder="Best way to reach you" /></div>
+      <div class="field"><label>Anything else? (optional)</label><textarea name="message" rows="2" placeholder="Tell me a bit about your business…"></textarea></div>
+      <button type="submit" class="btn btn-volt glow">Send Me My Free Mockup</button>
+      <p class="fineprint">No cost, no commitment. I'll get back to you within a day.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="#top" class="logo"><span class="mark"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9-12h-6.5L13 2z"/></svg></span>Tradie<span class="volt">Sites</span></a>
+      <p class="fdesc">Fast, professional websites for Australian tradies. Get found, get more jobs, stay on the tools.</p>
+    </div>
+    <div style="font-size:.9rem;color:var(--txt-dim);display:flex;flex-direction:column;gap:.4rem">
+      <a href="#work" style="color:var(--txt-dim)">Our Work</a>
+      <a href="#pricing" style="color:var(--txt-dim)">Pricing</a>
+      <a href="#contact" style="color:var(--txt-dim)">Free Mockup</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 TradieSites. All rights reserved.</span>
+    <span>Websites for Aussie tradies ⚡</span>
+  </div>
+</footer>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
