@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" width="320" height="72" font-family="Plus Jakarta Sans, Segoe UI, sans-serif">
+  <rect x="8" y="14" width="44" height="44" rx="11" fill="#FFC400"/>
+  <path d="M34 22 22 39h8l-2 11 14-19h-9l2-9z" fill="#0B1120"/>
+  <text x="66" y="47" font-size="30" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="#FFFFFF">Tradie</tspan><tspan fill="#FFC400">Sites</tspan>
+  </text>
+</svg>
