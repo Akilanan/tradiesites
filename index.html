@@ -342,7 +342,7 @@
       <a href="tel:+610000000000" class="cline"><span class="ci"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.9c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.3z"/></svg></span><div><div class="lbl">Call / text</div><div class="val">+61 4XX XXX XXX</div></div></a>
       <a href="mailto:hello@tradiesites.com.au" class="cline"><span class="ci"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 4 8 5 8-5"/></svg></span><div><div class="lbl">Email</div><div class="val">hello@tradiesites.com.au</div></div></a>
     </div>
-    <form action="https://formsubmit.co/12akilan2007@gmail.com" method="POST" class="reveal">
+    <form id="enquiryForm" method="POST" class="reveal">
       <input type="hidden" name="_subject" value="New free-mockup request — TradieSites" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
@@ -379,6 +379,8 @@
 <script>
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  // email kept out of page source (anti-scrape) — assembled at runtime
+  document.getElementById('enquiryForm').action='https://formsubmit.co/'+atob('MTJha2lsYW4yMDA3QGdtYWlsLmNvbQ==');
 </script>
 </body>
 </html>
