@@ -47,8 +47,8 @@
   header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,17,32,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
   .logo{display:flex;align-items:center;gap:.6rem;font-family:var(--disp);font-weight:800;color:#fff;font-size:1.15rem}
-  .logo .mark{width:36px;height:36px;display:grid;place-items:center;border-radius:9px;background:var(--volt);color:var(--ink)}
-  .logo .mark svg{width:20px;height:20px;fill:currentColor}
+  .logo .mark{width:36px;height:36px;display:grid;place-items:center;border-radius:9px;box-shadow:0 0 0 1px rgba(255,255,255,.14)}
+  .logo .mark svg{width:36px;height:36px;display:block}
   .links{display:flex;gap:2rem;font-weight:500;font-size:.92rem}
   .links a{color:var(--txt)}.links a:hover{color:#fff}
   .nav .btn-volt{padding:.55rem 1.1rem;font-size:.9rem}
@@ -177,7 +177,7 @@
 <!-- HEADER -->
 <header>
   <div class="wrap nav">
-    <a href="#top" class="logo"><span class="mark"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9-12h-6.5L13 2z"/></svg></span>Tradie<span class="volt">Sites</span></a>
+    <a href="#top" class="logo"><span class="mark"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0F1A33"/><rect x="14" y="15" width="36" height="11" rx="2" fill="#FFC400"/><circle cx="19.8" cy="20.5" r="2.2" fill="#0F1A33"/><circle cx="44.2" cy="20.5" r="2.2" fill="#0F1A33"/><path d="M26.5 26 H37.5 V40 L41 44.5 H23 L26.5 40 Z" fill="#FFC400"/><rect x="29.2" y="44.5" width="5.6" height="5" fill="#E0A800"/></svg></span>Tradie<span class="volt">Sites</span></a>
     <nav class="links">
       <a href="#work">Our Work</a><a href="#what">What You Get</a><a href="#pricing">Pricing</a><a href="#how">How It Works</a>
     </nav>
@@ -377,7 +377,7 @@
 <footer>
   <div class="wrap foot">
     <div>
-      <a href="#top" class="logo"><span class="mark"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9-12h-6.5L13 2z"/></svg></span>Tradie<span class="volt">Sites</span></a>
+      <a href="#top" class="logo"><span class="mark"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0F1A33"/><rect x="14" y="15" width="36" height="11" rx="2" fill="#FFC400"/><circle cx="19.8" cy="20.5" r="2.2" fill="#0F1A33"/><circle cx="44.2" cy="20.5" r="2.2" fill="#0F1A33"/><path d="M26.5 26 H37.5 V40 L41 44.5 H23 L26.5 40 Z" fill="#FFC400"/><rect x="29.2" y="44.5" width="5.6" height="5" fill="#E0A800"/></svg></span>Tradie<span class="volt">Sites</span></a>
       <p class="fdesc">Fast, professional websites for Australian tradies. Get found, get more jobs, stay on the tools.</p>
     </div>
     <div style="font-size:.9rem;color:var(--txt-dim);display:flex;flex-direction:column;gap:.4rem">
